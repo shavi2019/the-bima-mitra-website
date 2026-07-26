@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="hi-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Bima Mitra | संपर्क करें</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>🛡️ The Bima Mitra</h1>
+                <p>बीमा मित्र</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home | होम</a></li>
+                <li><a href="about.html">About | अबाउट</a></li>
+                <li><a href="services.html">Services | सेवाएं</a></li>
+                <li><a href="careers.html">Careers | करियर</a></li>
+                <li><a href="contact.html" class="active">Contact | संपर्क</a></li>
+            </ul>
+            <div class="language-toggle">
+                <button id="langBtn" class="lang-btn">EN | हिंदी</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Page Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>📞 Contact Us | हमसे संपर्क करें</h1>
+            <p>We are here to help you! | हम आपकी मदद के लिए यहाँ हैं!</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Phone Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>📱 Call Us | फोन करें</h3>
+                    <p>+91 9196332645</p>
+                    <p class="contact-time">Monday - Sunday: 9:00 AM - 9:00 PM</p>
+                    <a href="tel:+919196332645" class="contact-btn">Call Now</a>
+                </div>
+
+                <!-- Email Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>📧 Email Us | ईमेल करें</h3>
+                    <p>contact@thebimamitra.com</p>
+                    <p class="contact-time">Response within 24 hours</p>
+                    <a href="mailto:contact@thebimamitra.com" class="contact-btn">Send Email</a>
+                </div>
+
+                <!-- WhatsApp Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>💬 WhatsApp Chat | व्हाट्सएप</h3>
+                    <p>+91 9196332645</p>
+                    <p class="contact-time">Quick & Instant Reply</p>
+                    <a href="https://wa.me/919196332645?text=Hello%20Bima%20Mitra" target="_blank" class="contact-btn whatsapp-btn">Chat on WhatsApp</a>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>📍 Location | स्थान</h3>
+                    <p>Lucknow, Uttar Pradesh</p>
+                    <p class="contact-time">India 226001</p>
+                    <a href="https://maps.google.com" target="_blank" class="contact-btn">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>📝 Send us a Message | हमें संदेश भेजें</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+
+                <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="name">Full Name * | पूरा नाम</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address * | ईमेल पता</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number * | फोन नंबर</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number" pattern="[0-9]{10}" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="form-group">
+                        <label for="subject">Subject * | विषय</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select Subject --</option>
+                            <option value="life-insurance">Life Insurance | जीवन बीमा</option>
+                            <option value="health-insurance">Health Insurance | स्वास्थ्य बीमा</option>
+                            <option value="vehicle-insurance">Vehicle Insurance | वाहन बीमा</option>
+                            <option value="quote">Get a Quote | कोटेशन</option>
+                            <option value="join-advisor">Join as Advisor | एडवाइजर के रूप में जुड़ें</option>
+                            <option value="complaint">File a Complaint | शिकायत दर्ज करें</option>
+                            <option value="general">General Inquiry | सामान्य पूछताछ</option>
+                        </select>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message">Message * | संदेश</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Please describe your query or message" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <!-- Insurance Type (Optional) -->
+                    <div class="form-group">
+                        <label for="insuranceType">Interested In | रुचि है</label>
+                        <select id="insuranceType" name="insuranceType">
+                            <option value="">-- Not Applicable --</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="health">Health Insurance</option>
+                            <option value="vehicle">Vehicle Insurance</option>
+                            <option value="all">All Products</option>
+                        </select>
+                    </div>
+
+                    <!-- Preferred Contact Method -->
+                    <div class="form-group">
+                        <label>Preferred Contact Method | पसंदीदा संपर्क विधि</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="contactMethod" value="email" checked>
+                                Email | ईमेल
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="contactMethod" value="phone">
+                                Phone | फोन
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="contactMethod" value="whatsapp">
+                                WhatsApp | व्हाट्सएप
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            I agree to the <a href="disclaimer.html" target="_blank">Disclaimer</a> and <a href="privacy-policy.html" target="_blank">Privacy Policy</a> *
+                        </label>
+                        <span class="error-message" id="termsError"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message | संदेश भेजें
+                        </button>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Thank you! Your message has been sent successfully. We'll contact you soon!</p>
+                        <p>धन्यवाद! आपका संदेश सफलतापूर्वक भेज दिया गया है। हम जल्द ही आपसे संपर्क करेंगे!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>❓ Frequently Asked Questions | सामान्य प्रश्न</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the response time for inquiries? | पूछताछ के लिए प्रतिक्रिया समय क्या है?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24 hours during business hours. For urgent matters, please call us directly at +91 9196332645.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How can I get a free insurance quote? | मुझे मुफ्त बीमा कोटेशन कैसे मिल सकता है?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can get a free quote by filling out our contact form above, calling us at +91 9196332645, or chatting with us on WhatsApp. Our experts will provide personalized quotes based on your needs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I join as an insurance advisor? | मैं बीमा सलाहकार के रूप में कैसे जुड़ूँ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To join our team of insurance advisors, please select "Join as Advisor" in the Subject field of our contact form. Our HR team will get back to you with details about the opportunity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are your office hours? | आपके कार्यालय के घंटे क्या हैं?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We are available Monday to Sunday, 9:00 AM to 9:00 PM. You can reach us via phone, email, or WhatsApp anytime during these hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I file a complaint through this form? | क्या मैं इस फॉर्म के माध्यम से शिकायत दर्ज कर सकता हूँ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can select "File a Complaint" in the Subject field. All complaints are handled as per IRDA guidelines and resolved within 15 days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my personal information secure? | क्या मेरी व्यक्तिगत जानकारी सुरक्षित है?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we use 256-bit SSL encryption to protect all your personal information. Please review our Privacy Policy for complete details about data security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🛡️ The Bima Mitra | बीमा मित्र</h3>
+                    <p>आपका विश्वसनीय बीमा साथी</p>
+                    <p>Your Trusted Insurance Partner</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919196332645" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>त्वरित लिंक | Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home | होम</a></li>
+                        <li><a href="about.html">About | अबाउट</a></li>
+                        <li><a href="services.html">Services | सेवाएं</a></li>
+                        <li><a href="careers.html">Careers | करियर</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal | कानूनी</h4>
+                    <ul>
+                        <li><a href="disclaimer.html">Disclaimer | अस्वीकरण</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy | गोपनीयता नीति</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions | शर्तें</a></li>
+                        <li><a href="compliance.html">Compliance | अनुपालन</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>संपर्क करें | Contact Info</h4>
+                    <p><strong>📍 Location | स्थान:</strong><br>Lucknow, India</p>
+                    <p><strong>📱 Mobile | फोन:</strong><br>+91 9196332645</p>
+                    <p><strong>📧 Email | ईमेल:</strong><br>contact@thebimamitra.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Bima Mitra | बीमा मित्र. All Rights Reserved.</p>
+                <p>IRDA Licensed Insurance Broker | IRDA प्रमाणित बीमा दलाल</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
